@@ -13,6 +13,12 @@
         android:theme="@style/Theme.SMARTPARKING"
         tools:targetApi="31">
         <activity
+            android:name=".ParkingSlot"
+            android:exported="false" />
+        <activity
+            android:name=".GuestLobbyActivity"
+            android:exported="false" />
+        <activity
             android:name=".CheckMailActivity"
             android:exported="false" />
         <activity
