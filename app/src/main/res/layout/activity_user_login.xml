@@ -9,6 +9,7 @@
     android:background="@drawable/bg_opening"
     >
     <ImageButton
+        android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -72,6 +73,7 @@
             android:layout_gravity="start"
             android:text="PASSWORD"
             android:textSize="16sp"
+            android:textStyle="bold"
             android:textColor="@color/main_color"
             android:layout_marginTop="11dp"
             android:layout_marginStart="25dp"/>
@@ -87,6 +89,7 @@
             android:textColorHint="#818181"
             android:textSize="20sp"/>
         <TextView
+            android:id="@+id/fogotpass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
@@ -97,6 +100,7 @@
             android:textSize="16sp"
             android:textColor="#000000"/>
         <Button
+            android:id="@+id/signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="SIGN IN"
@@ -114,6 +118,7 @@
             android:textStyle="bold"
             android:layout_marginStart="25dp"/>
         <Button
+            android:id="@+id/signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"

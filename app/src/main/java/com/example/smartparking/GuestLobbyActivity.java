@@ -28,15 +28,15 @@ public class GuestLobbyActivity extends AppCompatActivity {
         LinearLayout parkingList = findViewById(R.id.parkingList);
         LayoutInflater inflater = LayoutInflater.from(this);
 
-        for (int i = 0; i < slotNames.length; i++) {
-            View slotView = inflater.inflate(R.layout.activity_parking_slot, parkingList, false);
-            TextView tvName = slotView.findViewById(R.id.tvSlotName);
-            ImageView icon = slotView.findViewById(R.id.statusIcon);
-
-            tvName.setText(slotNames[i]);
-            icon.setImageResource(icons[i]);
-
-            parkingList.addView(slotView);
-        }
+//        for (int i = 0; i < slotNames.length; i++) {
+//            View slotView = inflater.inflate(R.layout.activity_parking_slot, parkingList, false);
+//            TextView tvName = slotView.findViewById(R.id.tvSlotName);
+//            ImageView icon = slotView.findViewById(R.id.statusIcon);
+//
+//            tvName.setText(slotNames[i]);
+//            icon.setImageResource(icons[i]);
+//
+//            parkingList.addView(slotView);
+//        }
     }
 }
