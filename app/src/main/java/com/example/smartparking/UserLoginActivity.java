@@ -36,18 +36,13 @@ TextView forgotpass;
                 finish();
             }
         });
-        signin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
+        signin.setOnClickListener(v -> {
+            Intent intent = new Intent(UserLoginActivity.this, BottomNavi.class);
+            startActivity(intent);
         });
-        signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(UserLoginActivity.this, RegisterActivity.class);
-                startActivity(intent);
-            }
+        signup.setOnClickListener(v -> {
+            Intent intent = new Intent(UserLoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
         });
     }
 }
