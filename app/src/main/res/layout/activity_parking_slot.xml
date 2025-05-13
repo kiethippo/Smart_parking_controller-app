@@ -16,8 +16,8 @@
         android:background="@drawable/gradient_top"
         android:orientation="vertical">
         <ImageView
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginTop="36dp"
             android:background="@drawable/github_icon"
             android:layout_gravity="center_horizontal"/>
@@ -31,7 +31,7 @@
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:elevation="4dp"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:padding="15dp"
                 android:textAlignment="center"/>
             <TextView
@@ -40,7 +40,7 @@
                 android:text="PARKING SLOT"
                 android:textColor="#4091AE"
                 android:textStyle="bold"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:layout_marginTop="3dp"
                 android:padding="15dp"
                 android:textAlignment="center"/>
@@ -229,10 +229,11 @@
         </LinearLayout>
 
     </LinearLayout>
+
     <View
         android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        android:layout_height="642dp"
+        android:layout_weight="1" />
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -304,5 +305,4 @@
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
-
 </LinearLayout>

@@ -26,10 +26,10 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class UserLoginActivity extends AppCompatActivity {
-ImageButton back;
-Button signin, signup;
-TextView forgotpass;
-EditText email, password;
+    ImageButton back;
+    Button signin, signup;
+    TextView forgotpass;
+    EditText email, password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,24 +40,19 @@ EditText email, password;
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        back = findViewById(R.id.back);
         signin = findViewById(R.id.signin);
         signup = findViewById(R.id.signup);
         email = findViewById(R.id.edit_email);
         password = findViewById(R.id.edit_password);
         forgotpass = findViewById(R.id.fogotpass);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
         signin.setOnClickListener(v -> {
-            handle_Signin();
+            Intent intent2 = new Intent(UserLoginActivity.this, BottomNavi.class);
+            startActivity(intent2);
+            //handle_Signin();
         });
         signup.setOnClickListener(v -> {
-            Intent intent = new Intent(UserLoginActivity.this, RegisterActivity.class);
-            startActivity(intent);
+            Intent intent1 = new Intent(UserLoginActivity.this, RegisterActivity.class);
+            startActivity(intent1);
         });
     }
     private void handle_Signin(){
