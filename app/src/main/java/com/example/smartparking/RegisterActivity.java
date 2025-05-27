@@ -1,6 +1,5 @@
 package com.example.smartparking;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -18,7 +17,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.smartparking.Models.ApiClient;
-import com.example.smartparking.Models.LoginRequest;
 import com.example.smartparking.Models.LoginResponse;
 import com.example.smartparking.Models.UserRequest;
 

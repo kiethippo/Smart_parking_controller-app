@@ -3,7 +3,6 @@ package com.example.smartparking;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -17,8 +16,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.smartparking.Models.ApiClient;
-import com.example.smartparking.Models.LoginRequest;
 import com.example.smartparking.Models.LoginResponse;
+import com.example.smartparking.Models.UserSession;
 import com.example.smartparking.Models.Userlogin;
 
 import retrofit2.Call;
@@ -46,9 +45,7 @@ public class UserLoginActivity extends AppCompatActivity {
         password = findViewById(R.id.edit_password);
         forgotpass = findViewById(R.id.fogotpass);
         signin.setOnClickListener(v -> {
-            Intent intent2 = new Intent(UserLoginActivity.this, BottomNavi.class);
-            startActivity(intent2);
-            //handle_Signin();
+            handle_Signin();
         });
         signup.setOnClickListener(v -> {
             Intent intent1 = new Intent(UserLoginActivity.this, RegisterActivity.class);
@@ -71,14 +68,16 @@ public class UserLoginActivity extends AppCompatActivity {
                     String token = response.body().getToken();
                     String name = response.body().getUser().getName();
                     Toast.makeText(UserLoginActivity.this, "Welcome back: " + name, Toast.LENGTH_SHORT).show();
+                    UserSession session = UserSession.getInstance();
+                    session.setName(name);
+                    session.setEmail(email);
+                    session.setToken(token);
                     Intent intent = new Intent(UserLoginActivity.this, BottomNavi.class);
-                    intent.putExtra("token", token);
                     startActivity(intent);
                 } else {
                     Toast.makeText(UserLoginActivity.this, "Username or password is incorrect", Toast.LENGTH_SHORT).show();
                 }
             }
-
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
                 Toast.makeText(UserLoginActivity.this, "Lỗi mạng: " + t.getMessage(), Toast.LENGTH_SHORT).show();

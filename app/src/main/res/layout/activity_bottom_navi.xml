@@ -18,8 +18,9 @@
             app:layout_constraintBottom_toTopOf="@id/bottomNavi"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:navGraph = "@navigation/nav_graph"
-            />
+            app:navGraph="@navigation/nav_graph"
+            app:defaultNavHost="true" />
+
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavi"

@@ -46,13 +46,11 @@ public class BottomNavi extends AppCompatActivity {
                 navController.popBackStack(R.id.nav_home, true);
                 navController.navigate(R.id.nav_home);
             }
-            if(item.getItemId() == R.id.nav_person){
-                if (navController.getCurrentDestination().getId() != R.id.nav_person) {
-                    // Pop back stack về nav_ticket và làm mới để luôn hiển thị TicketFragment1
-                    navController.popBackStack(R.id.nav_person, true);
-                    navController.navigate(R.id.nav_person);
+            if (item.getItemId() == R.id.nav_person) {
+                if (navController.getCurrentDestination() == null ||
+                        navController.getCurrentDestination().getId() != R.id.ticketFragment1) {
+                    navController.navigate(R.id.ticketFragment1);
                 }
-                return true;
             }
             return NavigationUI.onNavDestinationSelected(item, navController);
         });
