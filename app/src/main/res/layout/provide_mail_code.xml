@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="20dp">
+    android:padding="20dp"
+    android:id="@+id/main">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,7 +54,7 @@
             android:orientation="horizontal"
             android:layout_margin="10dp">
             <EditText
-                android:id="@+id/userNameEditText"
+                android:id="@+id/confirmButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
@@ -67,7 +68,7 @@
                 android:backgroundTint="#D1D1D1"
                 android:background="@drawable/popup_bg"/>
             <Button
-                android:id="@+id/backToLoginButton"
+                android:id="@+id/otpEditText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.5"
